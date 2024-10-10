@@ -8,24 +8,46 @@ export default function Features() {
   const dataFeatures = [
     {
       id: 1,
-      title: "Sub-Heading 1",
-      logo: "",
+      title: "Poll Email Inbox (Python)",
+      logo: "./python.png",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec lorem non dolor fringilla consectetur. Nullam id feugiat mauris. Nulla facilisi. Vestibulum ante ipsum primis in faucibus ",
+        "This step involves using a Python script to monitor and collect incoming emails for job applications.",
     },
-    {
-      id: 2,
-      title: "Sub-Heading 2",
-      logo: "",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec lorem non dolor fringilla consectetur. Nullam id feugiat mauris. Nulla facilisi. Vestibulum ante ipsum primis in faucibus .",
-    },
+
     {
       id: 3,
-      title: "Sub-Heading 3",
-      logo: "",
+      title: "HR Analyzer (WXi)",
+      logo: "./hr-manager.png",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec lorem non dolor fringilla consectetur. Nullam id feugiat mauris. Nulla facilisi. Vestibulum ante ipsum primis in faucibus ",
+        "The HR Analyzer system, running on the WXi platform, processes the incoming data from Kafka. It analyzes resumes and extracts essential details for further processing.",
+    },
+    {
+      id: 4,
+      title: "Get Resume Details (RPA)",
+      logo: "./cv.png",
+      content:
+        "This RPA step pulls specific information from the resumes, such as candidate skills, work history, and educational background, and structures it for the subsequent stages.",
+    },
+    {
+      id: 5,
+      title: "Get Matching Scores (WXi.ai)",
+      logo: "./chatbot.png",
+      content:
+        "Using AI algorithms, this system calculates matching scores to determine how well each candidate fits the role based on the resume data.",
+    },
+    {
+      id: 6,
+      title: "Check Eligibility (ODM)",
+      logo: "./file.png",
+      content:
+        "The eligibility check system (ODM) ensures the candidate meets the minimum requirements (e.g., qualifications, experience) before proceeding.",
+    },
+    {
+      id: 7,
+      title: "Schedule an Interview (WXi)",
+      logo: "./kafka.png",
+      content:
+        "If the candidate passes the eligibility check, this system automatically schedules an interview by integrating with calendar systems.",
     },
   ];
 
@@ -45,18 +67,16 @@ export default function Features() {
           variants={content}
           className="text-center flex flex-col items-center"
         >
-          <Subtitle style="mb-2">Section 2</Subtitle>
+          <Subtitle style="mb-2">Interview Process</Subtitle>
           <SubHead style="mb-[18px] sm:w-8/12 md:w-9/12 lg:w-7/12">
-            Title 1
+            Automated HR Process
           </SubHead>
           <Paragraph
             fontSize="text-sm"
             color="text-black-400"
             style="sm:w-3/5 md:w-7/12 lg:w-1/3"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec
-            lorem non dolor fringilla consectetur. Nullam id feugiat mauris.
-            Nulla facilisi. Vestibulum ante ipsum primis in faucibus{" "}
+            Our automated HR process streamlines the journey from application to interview, using advanced technology to ensure efficient and accurate candidate screening.
           </Paragraph>
         </motion.div>
 

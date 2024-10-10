@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
-import { HiChat } from 'react-icons/hi';
-import { AiOutlineMinus } from 'react-icons/ai';
-import { BiChat } from 'react-icons/bi'; // Different icon for a more intuitive meaning
+import { useState } from "react";
+import { AiOutlineMinus } from "react-icons/ai";
+import { BiChat } from "react-icons/bi";
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
     { text: "Hello! How can I assist you today?", sender: "bot" },
     { text: "Hello! I need a Chatbot!", sender: "user" },
   ]);
-  const [inputValue, setInputValue] = useState('');
-  const [isVisible, setIsVisible] = useState(true); // State to manage visibility
-  const [isExpanded, setIsExpanded] = useState(false); // Set default to false for minimized view
+  const [inputValue, setInputValue] = useState("");
+  const [isVisible, setIsVisible] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleSend = () => {
-    if (inputValue.trim() === '') return; // Do nothing if input is empty
-    setMessages([...messages, { text: inputValue, sender: 'user' }]);
-    setInputValue('');
-    // Simulate bot response
+    if (inputValue.trim() === "") return;
+    setMessages([...messages, { text: inputValue, sender: "user" }]);
+    setInputValue("");
     setTimeout(() => {
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -34,12 +32,16 @@ const Chatbot = () => {
   return (
     <div
       className={`fixed bottom-4 right-4 bg-white shadow-md border border-gray-300 rounded-lg overflow-hidden transition-all duration-300 ${
-        isExpanded ? 'w-96 h-96' : 'w-12 h-12'
+        isExpanded ? "w-96 h-96" : "w-12 h-12"
       } flex flex-col`}
     >
       <div className="flex justify-between items-center px-4 py-2 border-b border-gray-300">
-        <h2 className={`text-lg font-semibold ${isExpanded ? 'text-zinc-800' : 'hidden'}`}>
-          Chatbot Assistant
+        <h2
+          className={`text-lg font-semibold ${
+            isExpanded ? "text-zinc-800" : "hidden"
+          }`}
+        >
+          AVPS Assistant
         </h2>
         <button
           onClick={handleToggleExpand}
@@ -54,12 +56,17 @@ const Chatbot = () => {
       </div>
       {isExpanded && (
         <>
-          <div className="flex-1 p-3 overflow-y-auto flex flex-col space-y-2" id="chatDisplay">
+          <div
+            className="flex-1 p-3 overflow-y-auto flex flex-col space-y-2"
+            id="chatDisplay"
+          >
             {messages.map((msg, index) => (
               <div
                 key={index}
                 className={`chat-message ${
-                  msg.sender === 'user' ? 'self-end bg-blue-500' : 'self-start bg-zinc-500'
+                  msg.sender === "user"
+                    ? "self-end bg-blue-500"
+                    : "self-start bg-zinc-500"
                 } text-white max-w-xs rounded-lg px-3 py-1.5 text-sm`}
               >
                 {msg.text}
