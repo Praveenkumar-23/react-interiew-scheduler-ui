@@ -53,33 +53,45 @@ export default function Navbar() {
           {/* Menu */}
           <div className="hidden md:flex items-center md:gap-4 lg:gap-8 text-black-200 text-sm lg:text-base font-body">
             <a href="#" className="navlink active-navlink">
-              Product
+              Our Products
             </a>
             <a href="#" className="navlink">
-              Solutions
+              Smart Solutions
             </a>
             <a href="#" className="navlink">
-              Pricing
+              Pricing Plans
             </a>
             <a href="#" className="navlink">
-              Resources
+              Resource Center
             </a>
             <a href="#" className="navlink">
-              Customers
+              Our Clients
             </a>
           </div>
 
           {/* Button */}
           <div className="hidden md:flex md:gap-4 lg:gap-[25px] items-center text-sm lg:text-base font-head font-medium">
+            <button className="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
+              Start Free
+            </button>
+            <button className="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
+              Contact
+            </button>
+          </div>
+
+          {/* <div className="hidden md:flex md:gap-4 lg:gap-[25px] items-center text-sm lg:text-base font-head font-medium">
             <a href="#">
-              <p className="text-black-100 underline cursor-pointer">Login</p>
-            </a>
-            <a href="#">
-              <button className="text-white bg-primary-100 md:py-2.5 px-4 py-3.5 px-[25px]">
-                Start free
+              <button className="text-white bg-[#007BFF] md:py-2.5 py-3.5 px-4 rounded transition duration-300 ease-in-out transform hover:bg-[#0056b3] focus:outline-none focus:ring-2 focus:ring-[#0056b3] focus:ring-opacity-50">
+                Start Free
               </button>
             </a>
-          </div>
+
+            <a href="#">
+              <button className="text-white bg-[#007BFF]   md:py-2.5 py-3.5 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105 hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-opacity-50">
+                Contact
+              </button>
+            </a>
+          </div> */}
         </div>
 
         {/* Navbar Menu (Mobile) */}
